@@ -1,1 +1,41 @@
-Don't readme
+Project for Human Robot Interaction. 
+
+Assignment 5 (Due: 10 AM, 10/30/2017 - Monday) 
+
+˃ In-class demo evaluation (10/30/2017 Monday class )
+˃ Upload your assignment report to BLACKBoard 
++ Your one paragraph project description
++ Your GitHub Link for your source code
+Overview
+
+The goal of this assignment is to design and implement the interaction between a simple conversational agent and a hardware-based system implemented using an Arduino microcontroller. The underlying communication should be handled by ROS and you are free to use any available APIs and libraries. See below for suggested resources and examples.
+
+You must also submit one paragraph or 5 sentence description of your project and the source code must be made public on GitHub,  and upload an assignment report (the description of your project and the GitHub link of your source code) to Blackboard.
+
+Grading Criteria
+
+(10 points) (1) Write a ROS publisher and publish any data (2) Being able to run '''roscore''' (3) Being able to echo the data through the use of '''rostopic'''. See day-1 for ROS command cheatsheet
+(10 points) A plain vanilla implementation of an Arduino-based system. You are free to use LEDs, servos, etc
+(20 points) An implementation of an Arduino-based system that receives data by subscribing to the ROS publisher you wrote
+(20 points) An implementation of an Arduino-based system that publishes data, in addition to subscribing to the ROS publisher you wrote.
+The data the Arduino publishes can be as simple as an acknowledgment that it has received a message.
+(20 points) Trigger a conversation using any voice recognition library or API
+(20 points) Trigger the execution of action based on the conversation
+(Extra 20 points) Implement a continuous conversation with the agent. The agent must respond to user and vice-versa.
+
+The following are included in the current version of the project:
+
+(10 points) (1) Write a ROS publisher and publish any data (2) Being able to run '''roscore''' (3) Being able to echo the data through the use of '''rostopic'''. See day-1 for ROS command cheatsheet
+(10 points) A plain vanilla implementation of an Arduino-based system. You are free to use LEDs, servos, etc
+(20 points) An implementation of an Arduino-based system that receives data by subscribing to the ROS publisher you wrote
+(20 points) An implementation of an Arduino-based system that publishes data, in addition to subscribing to the ROS publisher you wrote.
+The data the Arduino publishes can be as simple as an acknowledgment that it has received a message.
+
+In order to run the application:
+
+1. Verify and upload the arduino.ini to your arduino.
+2. Run roscore
+3. Run rosrun rosserial_python serial_node.py /dev/ttyACM0 (ttyACM0 is to be replaced with your device)
+4. Run rostopic echo toggle_led
+5. Run python subscriber.py
+6. Run python publisher.py
