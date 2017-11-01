@@ -39,3 +39,5 @@ In order to run the application:
 4. Run rostopic echo toggle_led
 5. Run python subscriber.py
 6. Run python publisher.py
+
+The application will request the user to enter either ledon or ledoff to turn an LED plugged into 13 and the ground on the arduino. This will then publish a message for the subscriber to read and tell the current state of the LED.
